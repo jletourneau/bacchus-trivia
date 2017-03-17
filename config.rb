@@ -18,6 +18,8 @@ page '/*.txt', layout: false
 
 # General configuration
 
+activate :sprockets
+
 # Reload the browser automatically whenever files change
 configure :development do
   activate :livereload
