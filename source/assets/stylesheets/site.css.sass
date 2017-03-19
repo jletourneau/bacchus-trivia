@@ -1,21 +1,10 @@
-body
-  background-color: #fbc547
-  color: #333
-  font-family: -apple-system, BlinkMacSystemFont, "Avenir Next", "Avenir", "Segoe UI", "Lucida Grande", "Helvetica Neue", "Helvetica", "Fira Sans", "Roboto", "Noto", "Droid Sans", "Cantarell", "Oxygen", "Ubuntu", "Franklin Gothic Medium", "Century Gothic", "Liberation Sans", sans-serif
-  padding: 18vh 1rem
-  text-align: center
-
-a
-  color: rgba(#000, 0.7)
-  &:focus, &:hover
-    color: rgba(#000, 0.6)
+// Settings file controlling Foundation output (colors, margins, etc.)
+@import '_foundation_settings'
+// Importing Foundation defines mixins etc. but generates no output of its own
+@import 'foundation'
+// Include for specifying which Foundation components to bring in via mixins
+@import '_foundation_components'
 
 .middleman-logo
   margin-bottom: 1rem
   width: 10rem
-
-#test
-  width: 100px
-  height: 100px
-  margin: 1rem auto
-  background: image-url('test.png')
