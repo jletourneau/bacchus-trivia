@@ -1,11 +1,11 @@
-config[:css_dir]    = 'assets/stylesheets'
-config[:js_dir]     = 'assets/javascripts'
+config[:css_dir] = 'assets/stylesheets'
+config[:js_dir] = 'assets/javascripts'
 config[:images_dir] = 'assets/images'
-config[:fonts_dir]  = 'assets/fonts'
-
-config[:layouts_dir]  = '_layouts'
+config[:fonts_dir] = 'assets/fonts'
+config[:layouts_dir] = '_layouts'
 config[:partials_dir] = '_partials'
 
+# Need to configure ES6 support to compile JavaScript from Foundation
 require 'sprockets/es6'
 activate :sprockets do |config|
   config.supported_output_extensions << '.es6'
@@ -22,6 +22,13 @@ configure :development do
 end
 
 configure :build do
+  set :haml, ugly: true
+
+  activate :minify_html do |html|
+    html.remove_input_attributes = false
+    html.remove_intertag_spaces = false
+  end
+
   activate :minify_css
   activate :minify_javascript
   activate :asset_hash
