@@ -1,7 +1,5 @@
-#= require modernizr
-
-# First non-comment, non-empty line blocks further requires
-1
-
-#= require jquery3
-#= require _foundation_components
+# Change "# require" to "#= require" as desired to include components
+#
+# require modernizr
+# require jquery3
+# require _foundation_components
