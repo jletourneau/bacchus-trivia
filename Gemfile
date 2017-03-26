@@ -8,3 +8,4 @@ gem 'middleman-minify-html', '~> 3.0'
 
 gem 'jquery-rails', '~> 4.0', require: false
 gem 'foundation-rails', '~> 6.0', require: false
+gem 'turbolinks', '~> 5.0', require: false

@@ -31,4 +31,8 @@
 # require foundation.zf.responsiveAccordionTabs.js
 #
 # Initialize Foundation components after they're included:
-# $(document).foundation();
+# $(document).foundation()
+#
+# Or, if Turbolinks is activated:
+# $(document).on 'turbolinks:load', ->
+#   $(document).foundation()
