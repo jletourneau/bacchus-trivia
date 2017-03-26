@@ -11,6 +11,9 @@ activate :sprockets do |config|
   config.supported_output_extensions << '.es6'
 end
 
+# Paths for files we may want to manually include in assets
+sprockets.append_path(File.join(root, 'vendor', 'js'))
+
 # Add paths for Foundation since we needed to do require: false in the Gemfile
 if (foundation_path = Gem::Specification.find_by_name('foundation-rails').gem_dir)
   sprockets.append_path(File.join(foundation_path, 'vendor', 'assets', 'scss'))
@@ -29,7 +32,15 @@ configure :build do
     html.remove_intertag_spaces = false
   end
 
+  require 'uglifier'
+  activate :minify_javascript, compressor: proc {
+    ::Uglifier.new(
+      output: {
+        comments: :none,
+      },
+    )
+  }
+
   activate :minify_css
-  activate :minify_javascript
   activate :asset_hash
 end
