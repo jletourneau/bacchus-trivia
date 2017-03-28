@@ -1,5 +1,6 @@
 GEM
   remote: https://rubygems.org/
+  remote: https://rails-assets.org/
   specs:
     actionpack (4.2.8)
       actionview (= 4.2.8)
@@ -128,6 +129,7 @@ GEM
       rack
     rack-test (0.6.3)
       rack (>= 1.0)
+    rails-assets-what-input (4.1.1)
     rails-deprecated_sanitizer (1.0.3)
       activesupport (>= 4.2.0.alpha)
     rails-dom-testing (1.0.8)
@@ -175,6 +177,7 @@ DEPENDENCIES
   middleman-livereload (~> 3.4)
   middleman-minify-html (~> 3.0)
   middleman-sprockets (~> 4.0)
+  rails-assets-what-input (~> 4.0)!
   turbolinks (~> 5.0)
 
 BUNDLED WITH
