@@ -20,8 +20,9 @@ if (foundation_path = Gem::Specification.find_by_name('foundation-rails').gem_di
   sprockets.append_path(File.join(foundation_path, 'vendor', 'assets', 'js'))
 end
 
-configure :development do
-  activate :livereload, no_swf: true
+# Modes
+
+configure :server do
 end
 
 configure :build do
@@ -43,4 +44,13 @@ configure :build do
 
   activate :minify_css
   activate :asset_hash
+end
+
+# Environments
+
+configure :development do
+  activate :livereload, no_swf: true
+end
+
+configure :production do
 end
