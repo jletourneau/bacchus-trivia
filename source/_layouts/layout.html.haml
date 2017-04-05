@@ -8,5 +8,6 @@
     = stylesheet_link_tag 'site'
   %body{ class: page_classes }
     = yield
+    = partial '_partials/footer'
     = javascript_include_tag 'site',
       data: { turbolinks: { eval: false } }

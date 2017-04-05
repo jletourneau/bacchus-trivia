@@ -3,7 +3,6 @@ config[:js_dir] = 'assets/javascripts'
 config[:images_dir] = 'assets/images'
 config[:fonts_dir] = 'assets/fonts'
 config[:layouts_dir] = '_layouts'
-config[:partials_dir] = '_partials'
 
 # Need to configure ES6 support to compile JavaScript from Foundation
 require 'sprockets/es6'
