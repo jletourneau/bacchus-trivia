@@ -41,7 +41,9 @@ configure :build do
     )
   }
 
-  activate :minify_css
+  # Gulp handles this after the build
+  # activate :minify_css
+
   activate :asset_hash
 end
 
