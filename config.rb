@@ -53,7 +53,7 @@ end
 # Environments
 
 configure :development do
-  activate :livereload, no_swf: true
+  activate :livereload, no_swf: true, host: 'localhost'
 end
 
 configure :production do
