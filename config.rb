@@ -41,10 +41,13 @@ configure :build do
     )
   }
 
-  # Gulp handles this after the build
-  # activate :minify_css
+  # Skip hashing for CSS files since we're going to do that with gulp after
+  # doing some more processing on them.
+  activate :asset_hash, ignore: %r{.*\.css$}
 
-  activate :asset_hash
+  after_build do
+    system './node_modules/gulp/bin/gulp.js default'
+  end
 end
 
 # Environments

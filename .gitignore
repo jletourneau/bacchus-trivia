@@ -17,5 +17,8 @@
 /.sass-cache
 /.cache
 
+# Ignore gulp working dir
+/.tmp
+
 # Ignore .DS_store file
 .DS_Store

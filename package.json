@@ -4,6 +4,9 @@
   "devDependencies": {
     "gulp": "^3.0.0",
     "gulp-purifycss": "^0.2.0",
-    "gulp-csso": "^3.0.0"
+    "gulp-csso": "^3.0.0",
+    "gulp-rev": "^7.0.0",
+    "gulp-rev-delete-original": "^0.0",
+    "gulp-rev-replace": "jamesknelson/gulp-rev-replace"
   }
 }
