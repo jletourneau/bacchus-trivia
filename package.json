@@ -1,5 +1,11 @@
 {
   "name": "middleman-v4",
+  "description": "“Hello world” Middleman site configured with tech/frameworks I prefer to use",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jletourneau/middleman4-template"
+  },
+  "license": "BSD-2-Clause",
   "version": "1.0.0",
   "devDependencies": {
     "write": "^0.3.3",
