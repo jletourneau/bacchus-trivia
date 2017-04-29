@@ -1,7 +1,7 @@
 desc 'Remove build directory completely.'
 task :clean do
-  rm_rf '.tmp'
-  rm_rf 'vendor'
+  rm_rf '.sass-cache'
+  rm_rf '.gulp-tmp'
   rm_rf 'build'
 end
 

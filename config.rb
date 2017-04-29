@@ -10,8 +10,8 @@ activate :sprockets do |config|
   config.supported_output_extensions << '.es6'
 end
 
-# Paths for files we may want to manually include in assets
-sprockets.append_path(File.join(root, 'vendor', 'js'))
+# Path for Gulp-generated resources we want to allow Sprockets to use
+sprockets.append_path(File.join(root, '.gulp-tmp'))
 
 # Add paths for Foundation since we needed to do require: false in the Gemfile
 if (foundation_path = Gem::Specification.find_by_name('foundation-rails').gem_dir)

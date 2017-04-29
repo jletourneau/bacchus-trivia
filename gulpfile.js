@@ -1,17 +1,16 @@
 var gulp = require('gulp'),
     manifest_filename = 'rev-manifest.json',
-    gulp_dir = '.tmp',
+    gulp_dir = '.gulp-tmp',
     build_dir = 'build',
     assets_dir = build_dir + '/assets',
     stylesheets_dir = assets_dir + '/stylesheets',
     js_dir = assets_dir + '/javascripts',
-    images_dir = assets_dir + '/images',
-    vendor_js_dir = 'vendor/js';
+    images_dir = assets_dir + '/images';
 
 gulp.task('modernizr', function () {
   var modernizr = require('modernizr'),
       write = require('write'),
-      js_file = (vendor_js_dir + '/modernizr.js');
+      js_file = (gulp_dir + '/modernizr.js');
   modernizr.build(
     {
       classPrefix: '',
@@ -21,7 +20,9 @@ gulp.task('modernizr', function () {
       'feature-detects': [
       ]
     },
-    function (js) { write(js_file, js, function (err) {}); }
+    function (js) { write(
+      (gulp_dir + '/modernizr.js'), js, function (err) {}
+    ); }
   );
 });
 
