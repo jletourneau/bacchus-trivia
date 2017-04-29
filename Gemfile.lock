@@ -26,7 +26,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    backports (3.7.0)
+    backports (3.8.0)
     builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
@@ -36,7 +36,7 @@ GEM
       sass (>= 3.2, < 3.5)
     concurrent-ruby (1.0.5)
     contracts (0.13.0)
-    dotenv (2.2.0)
+    dotenv (2.2.1)
     em-websocket (0.5.1)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.6.0)
@@ -172,6 +172,7 @@ PLATFORMS
 
 DEPENDENCIES
   foundation-rails (~> 6.0)
+  haml (~> 4.0)
   jquery-rails (~> 4.0)
   middleman (~> 4.2)
   middleman-livereload (~> 3.4)
