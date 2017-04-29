@@ -10,6 +10,9 @@
 # Ignore the build directory
 /build
 
+# Also ignore Gulp-generated JS
+/vendor
+
 # Ignore Node modules
 /node_modules
 

@@ -45,6 +45,10 @@ configure :build do
   # doing some more processing on them.
   activate :asset_hash, ignore: %r{.*\.css$}
 
+  after_configuration do
+    system './node_modules/gulp/bin/gulp.js before_build'
+  end
+
   after_build do
     system './node_modules/gulp/bin/gulp.js default'
   end
