@@ -10,6 +10,9 @@ activate :sprockets do |config|
   config.supported_output_extensions << '.es6'
 end
 
+# Allow Sprockets to bring in resources from NPM-installed modules
+sprockets.append_path(File.join(root, 'node_modules'))
+
 # Path for Gulp-generated resources we want to allow Sprockets to use
 sprockets.append_path(File.join(root, '.gulp-tmp'))
 
