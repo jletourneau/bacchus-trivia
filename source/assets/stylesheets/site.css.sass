@@ -4,3 +4,42 @@
 @import 'foundation'
 // Include for specifying which Foundation components to bring in via mixins
 @import '_foundation_components'
+
+body
+  padding-bottom: 2rem
+
+header
+  background: #333
+  color: #eee
+  margin-bottom: 1rem
+  padding: 0.33rem 0 0
+
+.hide
+  display: none
+
+.questions
+  background: rgba($secondary-color, 0.1)
+  border: 1px solid rgba($secondary-color, 0.2)
+  margin: 0 0 2rem
+  .question-list
+    margin: 0 1rem
+    padding: 1rem
+  .refresh-questions
+    padding: 1rem
+    background: rgba($secondary-color, 0.2)
+    .button
+      margin: 0
+
+.question
+  & + .question
+    margin: 1rem 0 0
+  .show-answer, .answer
+    margin: 0.25rem 0 0
+  .show-answer
+    font-style: italic
+    color: rgba(black, 0.6)
+    cursor: pointer
+  .answer
+    display: none
+    font-weight: bold
+    list-style-type: none

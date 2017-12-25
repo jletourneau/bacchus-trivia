@@ -1,20 +1,4 @@
 %header
-  %nav
-    .title-bar{ data: { 'responsive-toggle' => 'main-menu', 'hide-for' => 'medium' } }
-      %div{ data: { toggle: 'main-menu' } }
-        %button.menu-icon{ type: 'button' }
-          Menu
-        .title-bar-title
-          Site title
-    .top-bar{ id: 'main-menu' }
-      %ul.menu.vertical.medium-horizontal
-        %li.menu-text.hide-for-small-only Site title
-        %li
-          = link_to 'javascript:void(0)' do
-            Foo
-        %li
-          = link_to 'javascript:void(0)' do
-            Bar
-        %li
-          = link_to 'javascript:void(0)' do
-            Baz
+  .row
+    .columns
+      %h1 Bacchus trivia

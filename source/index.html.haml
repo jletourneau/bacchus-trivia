@@ -1,14 +1,56 @@
 ---
-title: Hello world
+title: Bacchus trivia
 ---
 
 .row
   .columns
-    %h1 Hello world
-    %ul
-      %li
-        = link_to '/other.html' do
-          To another page
-      %li
-        = link_to '/misc/more.html' do
-          To yet another page
+    %h2 Try your hand at Bacchus trivia…
+    %p
+      Here’s a sampling of questions that have been asked at previous trivia
+      nights at Bacchus.
+    .questions
+      %ul.question-list{ data: { length: 6 } }
+        %li
+          Loading questions…
+      .refresh-questions
+        %button.button{ disabled: true }
+          ↻ Load new questions
+
+.row
+  .columns
+    %h2 Want to play live?
+    %p
+      Bacchus holds trivia every Tuesday night at 7 PM at 33 Second Street in
+      downtown Troy. Use the stairs leading down from sidewalk level to the
+      left of the main building entrance. Free off-street evening parking is
+      available two blocks west in the garage at the corner of River and State
+      Street.
+    %p
+      The team leading at halftime receives a free round of up to four drinks,
+      and the winning team at the end of the night receives a $25 gift card to
+      Bacchus (redeemable on non-trivia nights).
+
+.row
+  .columns.large-6
+    %iframe{ width: '100%',
+             height: 450,
+             frameborder: 0,
+             allowfullscreen: true,
+             style: 'max-height: 60vh',
+             src: url_for('https://www.google.com/maps/embed/v1/place',
+                          query: { key: 'AIzaSyCz3JbeK3YQ9eJEWqpeKh7JVOhp14iTIw0',
+                                   q: 'place_id:ChIJm5yzggcP3okR3gRxhu1P8-U',
+                                   zoom: 15 }) }
+  .columns.large-6
+    %iframe{ width: '100%',
+             height: 450,
+             frameborder: 0,
+             allowfullscreen: true,
+             style: 'max-height: 60vh',
+             src: url_for('https://www.google.com/maps/embed/v1/streetview',
+                          query: { key: 'AIzaSyCz3JbeK3YQ9eJEWqpeKh7JVOhp14iTIw0',
+                                   location: '42.7304362,-73.691748',
+                                   heading: 300,
+                                   fov: 100 }) }
+
+.question-cache.hide{ data: { src: url_for('questions') } }
