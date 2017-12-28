@@ -35,10 +35,7 @@ insertQuestion = (question) ->
 questionReload.on 'click', () ->
   selectQuestions()
 
-questionList.on 'click', '.show-answer', () ->
-  $(this).hide().next('.answer').show()
-
-questionList.on 'click', '.answer', () ->
-  $(this).hide().prev('.show-answer').show()
+questionList.on 'click', '.question', () ->
+  $(this).find('.answer, .show-answer').toggle()
 
 loadQuestions()
