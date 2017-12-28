@@ -3,8 +3,8 @@ title: Bacchus trivia
 ---
 
 .row
-  .columns
-    %h2 Try your hand at Bacchus trivia…
+  .columns.large-8.large-centered
+    %h2 Give it a shot…
     %p
       Here’s a sampling of questions that have been asked at previous trivia
       nights at Bacchus.
@@ -15,28 +15,28 @@ title: Bacchus trivia
       .refresh-questions
         %button.button{ disabled: true }
           ↻ Load new questions
+    %hr.spacer
 
 .row
-  .columns
-    %h2 Want to play live?
+  .columns.large-8.large-centered
+    %h2 Ready to play live?
     %p
-      Bacchus holds trivia every Tuesday night at 7 PM at 33 Second Street in
-      downtown Troy. Use the stairs leading down from sidewalk level to the
-      left of the main building entrance. Free off-street evening parking is
-      available two blocks west in the garage at the corner of River and State
-      Street.
+      Bacchus holds trivia <strong>every Tuesday night at 7 PM at 33 Second
+      Street in downtown Troy</strong>. Use the stairs to the left of the main
+      building entrance leading down from sidewalk level. Free off-street
+      evening parking is available two blocks west in the garage at the corner
+      of River and State Street.
     %p
       The team leading at halftime receives a free round of up to four drinks,
       and the winning team at the end of the night receives a $25 gift card to
       Bacchus (redeemable on non-trivia nights).
+    %hr.spacer
 
 .row
   .columns.large-6
     %iframe{ width: '100%',
              height: 450,
-             frameborder: 0,
              allowfullscreen: true,
-             style: 'max-height: 60vh',
              src: url_for('https://www.google.com/maps/embed/v1/place',
                           query: { key: 'AIzaSyCz3JbeK3YQ9eJEWqpeKh7JVOhp14iTIw0',
                                    q: 'place_id:ChIJm5yzggcP3okR3gRxhu1P8-U',
@@ -44,9 +44,7 @@ title: Bacchus trivia
   .columns.large-6
     %iframe{ width: '100%',
              height: 450,
-             frameborder: 0,
              allowfullscreen: true,
-             style: 'max-height: 60vh',
              src: url_for('https://www.google.com/maps/embed/v1/streetview',
                           query: { key: 'AIzaSyCz3JbeK3YQ9eJEWqpeKh7JVOhp14iTIw0',
                                    location: '42.7304362,-73.691748',

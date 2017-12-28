@@ -38,4 +38,7 @@ questionReload.on 'click', () ->
 questionList.on 'click', '.show-answer', () ->
   $(this).hide().next('.answer').show()
 
+questionList.on 'click', '.answer', () ->
+  $(this).hide().prev('.show-answer').show()
+
 loadQuestions()

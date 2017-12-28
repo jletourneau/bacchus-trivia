@@ -5,6 +5,12 @@
 // Include for specifying which Foundation components to bring in via mixins
 @import '_foundation_components'
 
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,400i,700,700i')
+
+html
+  +breakpoint(medium)
+    font-size: 1.125 * $global-font-size
+
 body
   padding-bottom: 2rem
 
@@ -14,13 +20,27 @@ header
   margin-bottom: 1rem
   padding: 0.33rem 0 0
 
+h2, p
+  margin: 0 0 0.75rem
+
+iframe
+  max-height: 60vh
+  border: 0
+
+hr.spacer
+  visibility: hidden
+  border: 0
+  margin: 0
+  padding: 0
+  height: 2rem
+
 .hide
   display: none
 
 .questions
   background: rgba($secondary-color, 0.1)
   border: 1px solid rgba($secondary-color, 0.2)
-  margin: 0 0 2rem
+  margin: 0 0 1rem
   .question-list
     margin: 0 1rem
     padding: 1rem
@@ -34,12 +54,15 @@ header
   & + .question
     margin: 1rem 0 0
   .show-answer, .answer
-    margin: 0.25rem 0 0
+    margin: 0.5rem 0 0
+    line-height: 1.2
+    cursor: pointer
   .show-answer
     font-style: italic
     color: rgba(black, 0.6)
-    cursor: pointer
   .answer
     display: none
     font-weight: bold
     list-style-type: none
+    li + li
+      margin-top: 0.5rem
