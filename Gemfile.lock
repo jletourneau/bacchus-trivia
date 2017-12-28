@@ -25,7 +25,7 @@ GEM
     babel-transpiler (0.7.0)
       babel-source (>= 4.0, < 6)
       execjs (~> 2.0)
-    backports (3.10.3)
+    backports (3.11.0)
     builder (3.2.3)
     coffee-script (2.4.1)
       coffee-script-source
