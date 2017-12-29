@@ -28,6 +28,9 @@ configure :server do
 end
 
 configure :build do
+  activate :relative_assets
+  set :relative_links, true
+
   set :haml, ugly: true
 
   activate :minify_html do |html|

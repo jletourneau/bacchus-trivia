@@ -5,6 +5,7 @@ gem 'middleman', '~> 4.2'
 gem 'middleman-livereload', '~> 3.4'
 gem 'middleman-sprockets', '~> 4.0'
 gem 'middleman-minify-html', '~> 3.0'
+gem 'middleman-gh-pages', '~> 0.3'
 
 # Haml 5.0 complains about "outvar" and "context" options presumably set by
 # Middleman or some under-the-hood gem
