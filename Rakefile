@@ -1,3 +1,5 @@
+require 'middleman-gh-pages'
+
 desc 'Remove build directory completely.'
 task :clean do
   rm_rf '.sass-cache'
